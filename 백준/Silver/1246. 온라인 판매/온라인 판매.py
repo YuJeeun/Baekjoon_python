@@ -28,17 +28,15 @@ for i in range(m):
 arr = sorted(arr)
 
 for i in range(m):
-    # 1. 계란이 m-i개보다 많거나 같을때
-    if(n >= m-i):
-        p[arr[i]] = arr[i]*(m-i)
-    # 2. 계란(n)이 m-i개 보다 적을때
-    else:
-        p[arr[i]] = arr[i] * n
-
-    # if (n>=m):
+    # # 1. 계란이 m-i개보다 많거나 같을때
+    # if(n >= m-i):
     #     p[arr[i]] = arr[i]*(m-i)
-    # else: # 계란이 없음
-    #     p[arr[i]] = arr[i] * (max(n, m-i))
+    # # 2. 계란(n)이 m-i개 보다 적을때
+    # else:
+    #     p[arr[i]] = arr[i] * n
+
+    p[arr[i]] = arr[i] * min(n, m-i)
+
 for k, v in p.items():
     if(v==max(p.values())):
         print(k,v)
