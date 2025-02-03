@@ -1,4 +1,5 @@
 import sys
+
 inp = sys.stdin.readline
 
 n, m = map(int, inp().split())
@@ -15,7 +16,7 @@ def dfs():
             print(i, end=' ')
         print()
         return
-    
+
     for i in range(n):
         result.append(arr[i])
         dfs()
