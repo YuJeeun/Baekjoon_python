@@ -13,7 +13,7 @@ while queue:
     if cur == b:
         print(cnt)
         exit()
-    dx = [cur*2, int(str(cur)+'1')]
+    dx = [cur*2, cur*10+1]
     for i in range(2):
         nx = dx[i]
         if nx > b: continue
